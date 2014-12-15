@@ -7,11 +7,13 @@ hr {
   margin-bottom: 40px;
 }
 
-.page-header {
-  padding-bottom: 50px !important;
+.brand-header {
+  margin-top: 40px;
 }
 
-.sub-header {
-  padding-bottom: 14px;
+.nav-header {
+  margin: 60px 0 20px;
+  padding: 9px 0 9px;
+  border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
 }
