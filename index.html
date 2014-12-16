@@ -25,38 +25,126 @@
         <h1>Probrands <div class="pull-right"><small>Subtext for header</small></div></h1>
       </div>
 
-      <div class="nav-header">
+      <div role="tabpanel">
+        <div class="nav-header">
 
-        <!-- Nav tabs -->
-        <ul class="nav nav-pills nav-justified">
-          <li role="presentation"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Nike</a></li>
-          <li role="presentation"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">ESPN</a></li>
-          <li role="presentation"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Adidas</a></li>
-          <li role="presentation"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Sky Sports</a></li>
-          <li role="presentation"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Gatorade</a></li>
-          <li role="presentation"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Reebok</a></li>
-        </ul>
+          <!-- Nav tabs -->
+          <ul class="nav nav-pills nav-justified" role="tablist">
+            <li role="presentation"><a href="#nike" aria-controls="nike" role="tab" data-toggle="pill">Nike</a></li>
+            <li role="presentation"><a href="#espn" aria-controls="espn" role="tab" data-toggle="pill">ESPN</a></li>
+            <li role="presentation"><a href="#adidas" aria-controls="adidas" role="tab" data-toggle="pill">Adidas</a></li>
+            <li role="presentation"><a href="#skysports" aria-controls="skysports" role="tab" data-toggle="pill">Sky Sports</a></li>
+            <li role="presentation"><a href="#gatorade" aria-controls="gatorade" role="tab" data-toggle="pill">Gatorade</a></li>
+            <li role="presentation"><a href="#reebok" aria-controls="reebok" role="tab" data-toggle="pill">Reebok</a></li>
+          </ul>
 
-      </div>
+        </div>
 
-      <div id="collapseOne" class="collapse" aria-labelledby="headingOne">
-        <div class="jumbotron">
-          <div class="container">
-            <div class="row">
-              <div class="col-xs-6">
-                <a href="#" class="thumbnail">
-                  <img src="http://placehold.it/800x600" alt="First image">
-                </a>
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane fade" id="nike">
+            <div class="jumbotron">
+              <div class="row">
+                <div class="col-xs-6">
+                  <a href="#" class="thumbnail">
+                    <img src="http://placehold.it/800x600" alt="First image">
+                  </a>
+                </div>
+                <div class="col-xs-6">
+                  <a href="#" class="thumbnail">
+                    <img src="http://placehold.it/800x600" alt="Second image">
+                  </a>
+                </div>
               </div>
-              <div class="col-xs-6">
-                <a href="#" class="thumbnail">
-                  <img src="http://placehold.it/800x600" alt="Second image">
-                </a>
+              <p>Nike</p>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane fade" id="espn">
+            <div class="jumbotron">
+              <div class="row">
+                <div class="col-xs-6">
+                  <a href="#" class="thumbnail">
+                    <img src="http://placehold.it/800x600" alt="First image">
+                  </a>
+                </div>
+                <div class="col-xs-6">
+                  <a href="#" class="thumbnail">
+                    <img src="http://placehold.it/800x600" alt="Second image">
+                  </a>
+                </div>
               </div>
+              <p>ESPN</p>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane fade" id="adidas">
+            <div class="jumbotron">
+              <div class="row">
+                <div class="col-xs-6">
+                  <a href="#" class="thumbnail">
+                    <img src="http://placehold.it/800x600" alt="First image">
+                  </a>
+                </div>
+                <div class="col-xs-6">
+                  <a href="#" class="thumbnail">
+                    <img src="http://placehold.it/800x600" alt="Second image">
+                  </a>
+                </div>
+              </div>
+              <p>Adidas</p>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane fade" id="skysports">
+            <div class="jumbotron">
+              <div class="row">
+                <div class="col-xs-6">
+                  <a href="#" class="thumbnail">
+                    <img src="http://placehold.it/800x600" alt="First image">
+                  </a>
+                </div>
+                <div class="col-xs-6">
+                  <a href="#" class="thumbnail">
+                    <img src="http://placehold.it/800x600" alt="Second image">
+                  </a>
+                </div>
+              </div>
+              <p>Sky Sports</p>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane fade" id="gatorade">
+            <div class="jumbotron">
+              <div class="row">
+                <div class="col-xs-6">
+                  <a href="#" class="thumbnail">
+                    <img src="http://placehold.it/800x600" alt="First image">
+                  </a>
+                </div>
+                <div class="col-xs-6">
+                  <a href="#" class="thumbnail">
+                    <img src="http://placehold.it/800x600" alt="Second image">
+                  </a>
+                </div>
+              </div>
+              <p>Gatorade</p>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane fade" id="reebok">
+            <div class="jumbotron">
+              <div class="row">
+                <div class="col-xs-6">
+                  <a href="#" class="thumbnail">
+                    <img src="http://placehold.it/800x600" alt="First image">
+                  </a>
+                </div>
+                <div class="col-xs-6">
+                  <a href="#" class="thumbnail">
+                    <img src="http://placehold.it/800x600" alt="Second image">
+                  </a>
+                </div>
+              </div>
+              <p>Reebok</p>
             </div>
           </div>
         </div>
-      </div>
 
     </div> <!-- /container -->
 
