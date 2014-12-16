@@ -1,22 +1,21 @@
 h4 {
   margin-top: 25px;
 }
-
 hr {
   margin-top: 40px;
   margin-bottom: 40px;
 }
-
 .page-header {
-  border-bottom: none !important;
+  border-bottom: none;
 }
-
 .nav-header {
-  margin: 49px 0 20px;
-  padding: 9px 0 9px;
+  margin-top: 50px;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
 }
-
+.nav-pills > li > a {
+  border-radius: 0px;
+}
 .jumbotron {
-  background-color: #fff !important;
+  border-radius: 0px !important;
+}
