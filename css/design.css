@@ -1,10 +1,30 @@
-h4 {
-  margin-top: 25px;
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #000;
 }
+
+/*
+ * Base structure
+ */
+
 hr {
   margin-top: 40px;
   margin-bottom: 40px;
 }
+.jumbotron {
+  border-radius: 0px !important;
+}
+
+/*
+ * Header
+ */
+
 .page-header {
   border-bottom: none;
 }
@@ -16,9 +36,54 @@ hr {
 .nav-pills > li > a {
   border-radius: 0px;
 }
-.jumbotron {
-  border-radius: 0px !important;
+.masthead-brand {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
+.masthead-nav > li {
+  display: inline-block;
+}
+.masthead-nav > li + li {
+  margin-left: 20px;
+}
+.masthead-nav > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #404040; /* IE8 proofing */
+  color: rgba(0,0,0,.75);
+  border-bottom: 2px solid transparent;
+}
+.masthead-nav > li > a:hover,
+.masthead-nav > li > a:focus {
+  background-color: transparent;
+  border-bottom-color: #BFBFBF;
+  border-bottom-color: rgba(0,0,0,.25);
+}
+.masthead-nav > .active > a,
+.masthead-nav > .active > a:hover,
+.masthead-nav > .active > a:focus {
+  color: #000;
+  border-bottom-color: #000;
+}
+
+@media (min-width: 768px) {
+  .masthead-brand {
+    float: left;
+  }
+  .masthead-nav {
+    float: right;
+  }
+  .icon {
+    float: left;
+  }
+}
+
+/*
+ * Footer
+ */
+
 footer {
     color: #fff;
 }
