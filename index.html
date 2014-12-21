@@ -167,12 +167,22 @@
     <div class="container">
 
     <div class="row">
-      <div class="col-md-8 cold-xs-12 gap">
-        <div class="gap">
-          <img src="http://placekitten.com/g/1600/1800" class="img-responsive" alt="Responsive image">
+      <div class="col-md-8 cold-xs-12 gap-none">
+        <div class="col-xs-12 gap">
+          <img src="http://placekitten.com/g/1600/1200" class="img-responsive" alt="Responsive image">
+        </div>
+        <div class="col-xs-6 gap">
+          <div class="grid-box">
+            <div class="box-content">
+              <h4 id="box">The kitten above is called Snowball; he is a web developer.</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-6 gap">
+          <img src="http://placekitten.com/g/800/600" class="img-responsive" alt="Responsive image">
         </div>
       </div>
-      <div class="col-md-4 col-xs-12 gap">
+      <div class="col-md-4 col-xs-12 gap-none">
         <div class="col-md-12 col-xs-4 gap">
           <img src="http://placekitten.com/g/800/600" class="img-responsive" alt="Responsive image">
         </div>
@@ -182,7 +192,7 @@
         <div class="col-md-12 col-xs-4 gap">
           <div class="grid-box">
             <div class="box-content">
-              <small>These kittens are bread to perfection, just like this website.</small>
+              <h4 id="box">These kittens are bread to perfection, just like this website.</h4>
             </div>
           </div>
         </div>
@@ -256,5 +266,9 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script>
+      jQuery("#box").fitText();
+    </script>
   </body>
 </html>
