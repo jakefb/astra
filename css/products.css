@@ -61,6 +61,11 @@ hr {
 .thumbnails .active {
   background-color: #337ab7;
 }
+@media screen and (max-width: 991px) {
+  .fa-3x {
+    font-size: 6vw !important;
+  }
+}
 
 /*
  * Header
