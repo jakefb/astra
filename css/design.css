@@ -21,19 +21,27 @@ hr {
   border-radius: 0px !important;
 }
 .gap {
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-right: 4px;
-  padding-left: 4px;
+  padding: 4px;
 }
 .gap-none {
-  padding-right: 0px;
-  padding-left: 0px;
+  padding: 0px; /* Reset grid padding */
+}
+@media (min-width: 992px) {
+  .gap {
+    padding: 0px; /* Reset grid padding */
+  }
+  .gap + .gap {
+    padding-top: 8px;
+  }
+  .gap-side {
+    padding-right: 4px;
+    padding-left: 4px;
+  }
 }
 .grid-box {
   background-color: #7a7a7a;
   position: relative;
-  width: 100%;   /* desired width */
+  width: 100%;
 }
 .grid-box:before {
   content: "";
