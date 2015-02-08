@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-
-<html lang="en">
+<html lang="en" ng-app="probrands">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,6 +20,11 @@
     <!-- Font Awesome -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
 
   <body>
@@ -41,103 +45,109 @@
         </div>
       </div>
 
-      <div role="tabpanel">
-        <div class="nav-header">
+      <section class="nav-header" ng-controller="TabController as tab">
+        <!-- Nav tabs -->
+        <ul class="nav nav-pills nav-justified">
+          <li ng-class="{ active: tab.isSet(1) }">
+            <a href ng-click="tab.setTab(1)">Nike</a>
+          </li>
+          <li ng-class="{ active: tab.isSet(2) }">
+            <a href ng-click="tab.setTab(2)">ESPN</a>
+          </li>
+          <li ng-class="{ active: tab.isSet(3) }">
+            <a href ng-click="tab.setTab(3)">Adidas</a>
+          </li>
+          <li ng-class="{ active: tab.isSet(4) }">
+            <a href ng-click="tab.setTab(4)">Sky Sports</a>
+          </li>
+          <li ng-class="{ active: tab.isSet(5) }">
+            <a href ng-click="tab.setTab(5)">Gatorade</a>
+          </li>
+          <li ng-class="{ active: tab.isSet(6) }">
+            <a href ng-click="tab.setTab(6)">Reebok</a>
+          </li>
+        </ul>
 
-          <!-- Nav tabs -->
-          <ul class="nav nav-pills nav-justified" role="tablist">
-            <li role="presentation"><a href="#nike" aria-controls="nike" role="tab" data-toggle="pill">Nike</a></li>
-            <li role="presentation"><a href="#espn" aria-controls="espn" role="tab" data-toggle="pill">ESPN</a></li>
-            <li role="presentation"><a href="#adidas" aria-controls="adidas" role="tab" data-toggle="pill">Adidas</a></li>
-            <li role="presentation"><a href="#skysports" aria-controls="skysports" role="tab" data-toggle="pill">Sky Sports</a></li>
-            <li role="presentation"><a href="#gatorade" aria-controls="gatorade" role="tab" data-toggle="pill">Gatorade</a></li>
-            <li role="presentation"><a href="#reebok" aria-controls="reebok" role="tab" data-toggle="pill">Reebok</a></li>
-          </ul>
-
-        </div>
-
-        <!-- Tab panes -->
-        <div class="tab-content">
-          <div role="tabpanel" class="tab-pane fade" id="nike">
-            <div class="jumbotron">
-              <div class="row">
-                <div class="col-xs-6">
-                  <img src="http://placekitten.com/g/800/600" class="img-responsive" alt="First image">
-                </div>
-                <div class="col-xs-6">
-                  <img src="http://placekitten.com/g/800/600" class="img-responsive" alt="Second image">
-                </div>
+        <div ng-show="tab.isSet(1)">
+          <div class="jumbotron">
+            <div class="row">
+              <div class="col-xs-6">
+                <img src="http://placekitten.com/g/800/600" class="img-responsive" alt="First image">
               </div>
-              <p>Nike</p>
-            </div>
-          </div>
-          <div role="tabpanel" class="tab-pane fade" id="espn">
-            <div class="jumbotron">
-              <div class="row">
-                <div class="col-xs-6">
-                  <img src="http://placekitten.com/g/800/600" class="img-responsive" alt="First image">
-                </div>
-                <div class="col-xs-6">
-                  <img src="http://placekitten.com/g/800/600" class="img-responsive" alt="Second image">
-                </div>
+              <div class="col-xs-6">
+                <img src="http://placekitten.com/g/800/600" class="img-responsive" alt="Second image">
               </div>
-              <p>ESPN</p>
             </div>
-          </div>
-          <div role="tabpanel" class="tab-pane fade" id="adidas">
-            <div class="jumbotron">
-              <div class="row">
-                <div class="col-xs-6">
-                  <img src="http://placekitten.com/g/800/600" class="img-responsive" alt="First image">
-                </div>
-                <div class="col-xs-6">
-                  <img src="http://placekitten.com/g/800/600" class="img-responsive" alt="Second image">
-                </div>
-              </div>
-              <p>Adidas</p>
-            </div>
-          </div>
-          <div role="tabpanel" class="tab-pane fade" id="skysports">
-            <div class="jumbotron">
-              <div class="row">
-                <div class="col-xs-6">
-                  <img src="http://placekitten.com/g/800/600" class="img-responsive" alt="First image">
-                </div>
-                <div class="col-xs-6">
-                  <img src="http://placekitten.com/g/800/600" class="img-responsive" alt="Second image">
-                </div>
-              </div>
-              <p>Sky Sports</p>
-            </div>
-          </div>
-          <div role="tabpanel" class="tab-pane fade" id="gatorade">
-            <div class="jumbotron">
-              <div class="row">
-                <div class="col-xs-6">
-                  <img src="http://placekitten.com/g/800/600" class="img-responsive" alt="First image">
-                </div>
-                <div class="col-xs-6">
-                  <img src="http://placekitten.com/g/800/600" class="img-responsive" alt="Second image">
-                </div>
-              </div>
-              <p>Gatorade</p>
-            </div>
-          </div>
-          <div role="tabpanel" class="tab-pane fade" id="reebok">
-            <div class="jumbotron">
-              <div class="row">
-                <div class="col-xs-6">
-                  <img src="http://placekitten.com/g/800/600" class="img-responsive" alt="First image">
-                </div>
-                <div class="col-xs-6">
-                  <img src="http://placekitten.com/g/800/600" class="img-responsive" alt="Second image">
-                </div>
-              </div>
-              <p>Reebok</p>
-            </div>
+            <p>Nike</p>
           </div>
         </div>
-      </div>
+        <div ng-show="tab.isSet(2)">
+          <div class="jumbotron">
+            <div class="row">
+              <div class="col-xs-6">
+                <img src="http://placekitten.com/g/800/600" class="img-responsive" alt="First image">
+              </div>
+              <div class="col-xs-6">
+                <img src="http://placekitten.com/g/800/600" class="img-responsive" alt="Second image">
+              </div>
+            </div>
+            <p>ESPN</p>
+          </div>
+        </div>
+        <div ng-show="tab.isSet(3)">
+          <div class="jumbotron">
+            <div class="row">
+              <div class="col-xs-6">
+                <img src="http://placekitten.com/g/800/600" class="img-responsive" alt="First image">
+              </div>
+              <div class="col-xs-6">
+                <img src="http://placekitten.com/g/800/600" class="img-responsive" alt="Second image">
+              </div>
+            </div>
+            <p>Adidas</p>
+          </div>
+        </div>
+        <div ng-show="tab.isSet(4)">
+          <div class="jumbotron">
+            <div class="row">
+              <div class="col-xs-6">
+                <img src="http://placekitten.com/g/800/600" class="img-responsive" alt="First image">
+              </div>
+              <div class="col-xs-6">
+                <img src="http://placekitten.com/g/800/600" class="img-responsive" alt="Second image">
+              </div>
+            </div>
+            <p>Sky Sports</p>
+          </div>
+        </div>
+        <div ng-show="tab.isSet(5)">
+          <div class="jumbotron">
+            <div class="row">
+              <div class="col-xs-6">
+                <img src="http://placekitten.com/g/800/600" class="img-responsive" alt="First image">
+              </div>
+              <div class="col-xs-6">
+                <img src="http://placekitten.com/g/800/600" class="img-responsive" alt="Second image">
+              </div>
+            </div>
+            <p>Gatorade</p>
+          </div>
+        </div>
+        <div ng-show="tab.isSet(6)">
+          <div class="jumbotron">
+            <div class="row">
+              <div class="col-xs-6">
+                <img src="http://placekitten.com/g/800/600" class="img-responsive" alt="First image">
+              </div>
+              <div class="col-xs-6">
+                <img src="http://placekitten.com/g/800/600" class="img-responsive" alt="Second image">
+              </div>
+            </div>
+            <p>Reebok</p>
+          </div>
+        </div>
+      </section>
+
     </div> <!-- /container -->
 
     <br>
@@ -231,6 +241,8 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/angular.min.js"></script>
+    <script src="../js/app.js"></script>
   </body>
 </html>
